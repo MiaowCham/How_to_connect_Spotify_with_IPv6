@@ -30,7 +30,6 @@ netsh interface ipv6 show prefixpolicies
 1. 打开 **命令提示符**（`Win + R` → `cmd` → 回车）
 2. 运行：
     ```cmd
-    ping open.spotify.com
     ping api.spotify.com
     ping accounts.spotify.com
     ```
@@ -48,8 +47,8 @@ nslookup spotify.com
 
 ### **5. 测试 `ping` 和 `curl`**
 ```cmd
-ping spotify.com          # 应返回 IPv6 地址
-curl -v https://pen.spotify.com  # 应使用 IPv6 连接
+ping api.spotify.com          # 应返回 IPv6 地址
+curl -v https://api.spotify.com  # 应使用 IPv6 连接
 ```
 
 ---
