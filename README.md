@@ -78,7 +78,6 @@ IPv6 需要网络和硬件同时支持才可以启用
 1. 打开 **命令提示符**（`Win + R` → `cmd` → 回车）
 2. 运行：
     ```cmd
-    ping -6 open.spotify.com
     ping -6 api.spotify.com
     ping -6 accounts.spotify.com
     ```
