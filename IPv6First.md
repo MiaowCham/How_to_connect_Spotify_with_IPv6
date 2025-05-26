@@ -43,11 +43,6 @@ netsh interface ipv6 show prefixpolicies
 ---
 
 ## **🔍 额外优化（可选）**
-### **4. 禁用 IPv4（仅测试用，不推荐长期使用）**
-```cmd
-netsh interface ipv4 set global disabled=yes
-```
-- **⚠️ 警告**：此操作会完全禁用 IPv4，可能导致部分网站/服务不可用！仅用于测试 IPv6 连通性。
 
 ### **5. 检查 DNS 解析顺序**
 ```cmd
@@ -75,22 +70,3 @@ curl -v https://pen.spotify.com  # 应使用 IPv6 连接
 netsh interface ipv6 reset
 ```
 - 重启计算机后，所有设置会恢复默认。
-
----
-
-## **✅ 最终效果**
-| 工具/协议       | 是否优先 IPv6          | 备注                          |
-|----------------|-----------------------|-----------------------------|
-| `ping`         | ✅ 是（需按上述配置）     | 原先默认走 IPv4，现在强制 IPv6   |
-| `curl`/浏览器   | ✅ 是                 | 自动选择 IPv6                 |
-| 游戏/UDP 应用   | ✅ 是                 | 依赖应用是否支持 IPv6           |
-| 企业网络        | ⚠️ 可能受组策略限制     | 需管理员权限调整               |
-
----
-
-## **📜 总结**
-1. **运行 `prefixpolicy` 命令**（核心步骤，必须做）。
-2. **用 `randomizeidentifiers` 刷新配置**（避免重启）。
-3. **测试 `ping` 和 `curl`** 确认 IPv6 优先。
-
-这样配置后，Windows 会**全局优先使用 IPv6**，包括 `ping`、浏览器、下载工具等所有网络活动！ 🚀
