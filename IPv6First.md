@@ -10,26 +10,22 @@
 ### **1. 修改 IPv6 前缀策略（强制优先级）**
 **以管理员身份运行 CMD/PowerShell**，执行：
 ```cmd
-netsh interface ipv6 set prefixpolicy ::/0 50 0 persistent
+netsh interface ipv6 set prefixpolicy ::/0 100 0 persistent
 netsh interface ipv6 set prefixpolicy ::ffff:0:0/96 40 1 persistent
-```
-- **`::/0`**：代表所有 IPv6 地址，优先级设为 **50**（最高）
-- **`::ffff:0:0/96`**：代表 IPv4 映射地址，优先级设为 **40**（低于 IPv6）
-
-### **2. 立即生效（无需重启）**
-```cmd
 netsh interface ipv6 set global randomizeidentifiers=disabled
 netsh interface ipv6 set global randomizeidentifiers=enabled
 ```
-- 此操作会**重新加载 IPv6 配置**，使策略立即生效。
+- **`::/0`**：代表所有 IPv6 地址，优先级设为 **100**（最高）
+- **`::ffff:0:0/96`**：代表 IPv4 映射地址，优先级设为 **40**（低于 IPv6）
+- 第三、四行通过**重新加载 IPv6 配置**，使策略立即生效。
 
-### **3. 验证配置**
+### **2. 验证配置**
 ```cmd
 netsh interface ipv6 show prefixpolicies
 ```
 - 检查输出，确保 `::/0` 的 **Precedence** 为 **50**，且排在 `::ffff:0:0/96` 之前。
 
-### **4. 验证连接**
+### **3. 验证连接**
 可以在 `终端App` 中依次运行以下命令检测连接情况：
 1. 打开 **命令提示符**（`Win + R` → `cmd` → 回车）
 2. 运行：
@@ -44,13 +40,13 @@ netsh interface ipv6 show prefixpolicies
 
 ## **🔍 额外优化（可选）**
 
-### **5. 检查 DNS 解析顺序**
+### **4. 检查 DNS 解析顺序**
 ```cmd
 nslookup spotify.com
 ```
 - 如果 IPv6（AAAA 记录）排在 IPv4（A 记录）之前，说明 DNS 策略已生效。
 
-### **6. 测试 `ping` 和 `curl`**
+### **5. 测试 `ping` 和 `curl`**
 ```cmd
 ping spotify.com          # 应返回 IPv6 地址
 curl -v https://pen.spotify.com  # 应使用 IPv6 连接
