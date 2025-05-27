@@ -1,10 +1,6 @@
 # How to Connect to Spotify and Lyricify Using IPv6  
 
-<h6>
-
-[简体中文](./README.md) / English
-
-</h6>
+###### [简体中文](./README.md) / English
 
 > [!NOTE]
 > This document was translated by DeepSeek. For feedback or issues, please refer to the original content.

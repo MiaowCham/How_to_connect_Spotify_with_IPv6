@@ -1,10 +1,6 @@
 # **使 Windows 全局优先使用 IPv6 连接**
 
-<h6>
-
-简体中文 / [English](./IPv6First-EN.md) / [返回主文档](./README.md)
-
-</h6>
+###### 简体中文 / [English](./IPv6First-EN.md) / [返回主文档](./README.md)
 
 > [!note]
 > 本文档由 DeepSeek 总结并生成
