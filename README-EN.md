@@ -18,7 +18,7 @@ Current solutions include using a VPN or configuring IPv6 to access Spotify.
     - [Network Support](#network-support)  
     - [Router Configuration](#router-configuration)  
     - [Optical Modem/Direct Cable Connection](#optical-modemdirect-cable-connection)  
-- [Prioritize IPv6 Usage](#prioritize-ipv6-usage)  
+- [Prioritize IPv6](#prioritize-ipv6)  
     - [Verify Connectivity](#verify-connectivity)  
     - [Check IPv6 Priority](#check-ipv6-priority)  
 - [Force Windows to Globally Prioritize IPv6](/IPv6First-EN.md)  

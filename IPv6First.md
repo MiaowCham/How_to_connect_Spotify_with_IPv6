@@ -2,7 +2,7 @@
 
 <h6>
 
-简体中文 / [English](./IPv6First-EN.md)
+简体中文 / [English](./IPv6First-EN.md) / [返回主文档](./README.md)
 
 </h6>
 
