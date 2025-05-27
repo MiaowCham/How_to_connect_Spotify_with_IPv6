@@ -23,7 +23,7 @@ netsh interface ipv6 set global randomizeidentifiers=enabled
 ```cmd
 netsh interface ipv6 show prefixpolicies
 ```
-- 检查输出，确保 `::/0` 的 **Precedence** 为 **50**，且排在 `::ffff:0:0/96` 之前。
+- 检查输出，确保 `::/0` 的 **Precedence** 为 **100**，且排在 `::ffff:0:0/96` 之前。
 
 ### **3. 验证连接**
 可以在 `终端App` 中依次运行以下命令检测连接情况：
