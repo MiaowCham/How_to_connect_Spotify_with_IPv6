@@ -21,7 +21,7 @@ Current solutions include using a VPN or configuring IPv6 to access Spotify.
 - [Prioritize IPv6 Usage](#prioritize-ipv6-usage)  
     - [Verify Connectivity](#verify-connectivity)  
     - [Check IPv6 Priority](#check-ipv6-priority)  
-- [Force Windows to Globally Prioritize IPv6](/IPv6First.md)  
+- [Force Windows to Globally Prioritize IPv6](/IPv6First-EN.md)  
 
 ---
 
@@ -105,9 +105,10 @@ Successful replies indicate IPv6 connectivity.
    - Higher "Precedence" values indicate higher priority.  
    - Ensure `::/0` (IPv6) has higher precedence than `::/96` or `::ffff:0:0/96` (IPv4).  
 
-If IPv6 priority is lower, follow the [Force Windows to Globally Prioritize IPv6](/IPv6First.md) guide or use the [one-click script](https://github.com/MiaowCham/How_to_connect_Spotify_with_IPv6/releases/latest).  
+If IPv6 priority is lower, follow the [Force Windows to Globally Prioritize IPv6](/IPv6First-EN.md) guide.<br>
+Or use the [one-click script](https://github.com/MiaowCham/How_to_connect_Spotify_with_IPv6/releases/latest).  
 
-> [!NOTE]  
+> [!note]  
 > Settings reset after rebooting. Re-run the script or reapply settings post-reboot.  
 
 If issues persist, double-check all steps to ensure proper IPv6 configuration.  
@@ -117,4 +118,3 @@ If issues persist, double-check all steps to ensure proper IPv6 configuration.
 ## License  
 This document is licensed under **CC0-1.0**.  
 You may freely use, modify, and distribute its contents.  
-[file content end]
