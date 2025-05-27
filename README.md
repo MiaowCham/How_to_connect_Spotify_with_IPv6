@@ -98,6 +98,12 @@ IPv6 需要网络和硬件同时支持才可以启用
 
 如果 IPv6 优先级低于 IPv4，请参照 [使 Windows 全局优先使用 IPv6 连接](/IPv6First.md) 文档的教程
 
+或者使用 [一键提升优先级脚本](https://github.com/MiaowCham/How_to_connect_Spotify_with_IPv6/releases/latest)
+
+> [!note]
+> 重启计算机后，所有设置会恢复默认。
+> 也就是说重启计算机后需要重新设置/运行脚本。
+
 一般情况下，完成设置后即可恢复对 Spotify 和 Lyricify 的访问<br>
 若完成设置后仍然无法访问，请尝试重新设置，保证无遗漏步骤，确保 IPv6 已被正确开启
 
